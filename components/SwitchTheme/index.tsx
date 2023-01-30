@@ -11,7 +11,7 @@ export function SwitchTheme({ ...rest }: HTMLAttributes<HTMLDivElement>) {
 
   return (
     <div {...rest}>
-      <div className="max-w-4xl flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 p-3 rounded-xl">
+      <div className="max-w-4xl flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-700 py-3 px-5 rounded-xl">
         <Switch 
           onChange={() => setDarkTheme(!darkTheme)}
           checked={darkTheme}

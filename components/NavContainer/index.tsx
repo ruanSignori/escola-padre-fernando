@@ -8,6 +8,7 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 import { SwitchTheme } from "../SwitchTheme";
+import { NavList } from "./NavList";
  
 export function NavContainer() {
   const [openNav, setOpenNav] = useState(false);
@@ -19,38 +20,6 @@ export function NavContainer() {
     );
   }, []);
  
-  const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
-      >
-        <Link href="#" className="flex items-center">
-          Projetos
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
-      >
-        <Link href="#" className="flex items-center">
-          Sobre
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
-      >
-        <Link href="#" className="flex items-center">
-          Informações
-        </Link>
-      </Typography>
-    </ul>
-  );
- 
   return (
     <Navbar className="mx-auto max-w-screen-2xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-800 backdrop-filter backdrop-blur-lg bg-opacity-60">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900 dark:text-blue-gray-100">
@@ -61,7 +30,7 @@ export function NavContainer() {
         >
           <Link href="/">Home</Link>
         </Typography>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:block">{<NavList />}</div>
         <SwitchTheme className="hidden lg:block"/>
         <IconButton
           variant="text"
@@ -102,7 +71,7 @@ export function NavContainer() {
         </IconButton>
       </div>
       <MobileNav open={openNav}>
-        {navList}
+        {<NavList />}
         <SwitchTheme />
       </MobileNav>
     </Navbar>
