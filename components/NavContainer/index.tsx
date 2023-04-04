@@ -1,37 +1,31 @@
 import { useState, useEffect } from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+import { Navbar, MobileNav, IconButton } from "@material-tailwind/react";
 import Link from "next/link";
 import { SwitchTheme } from "../SwitchTheme";
 import { NavList } from "./NavList";
- 
+
 export function NavContainer() {
   const [openNav, setOpenNav] = useState(false);
- 
+
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
- 
+
   return (
-    <Navbar className="mx-auto max-w-screen-2xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-900 backdrop-filter backdrop-blur-lg bg-opacity-60 transition-colors">
+    <Navbar className="mx-auto max-w-screen-2xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-900 backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 dark:border-gray-700 transition-colors">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900 dark:text-white ">
-        <Typography
-          as="div"
-          variant="small"
-          className="mr-4 cursor-pointer py-1.5 font-normal"
+        <Link
+          href="/"
+          className="font-medium text-blue-gray-900 dark:text-white hover:brightness-75 px-5 py-3 transition duration-150 ease-in-out"
         >
-          <Link href="/">Home</Link>
-        </Typography>
+          Home
+        </Link>
+
         <div className="hidden lg:block">{<NavList />}</div>
-        <SwitchTheme className="hidden lg:block"/>
+        <SwitchTheme className="hidden lg:block" />
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
