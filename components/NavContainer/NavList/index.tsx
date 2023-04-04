@@ -7,7 +7,7 @@ export function NavList() {
       <Typography
         as="li"
         variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
+        className="p-1 font-normal text-blue-gray-900 dark:text-white"
       >
         <Link href="#" className="flex items-center">
           Projetos
@@ -16,7 +16,7 @@ export function NavList() {
       <Typography
         as="li"
         variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
+        className="p-1 font-normal text-blue-gray-900 dark:text-white"
       >
         <Link href="#" className="flex items-center">
           Sobre
@@ -25,7 +25,7 @@ export function NavList() {
       <Typography
         as="li"
         variant="small"
-        className="p-1 font-normal text-blue-gray-900 dark:text-blue-gray-100"
+        className="p-1 font-normal text-blue-gray-900 dark:text-white"
       >
         <Link href="#" className="flex items-center">
           Informações
