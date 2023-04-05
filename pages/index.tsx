@@ -19,7 +19,7 @@ export default function Home() {
 
         <Link
           href="/"
-          className="text-white text-center px-12 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 w-5/6 mb-4 sm:w-auto sm:mb-0"
+          className="text-white text-center px-10 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/50 w-5/6 mb-4 sm:w-auto sm:mb-0 "
         >
           Ver mais
         </Link>
