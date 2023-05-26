@@ -130,6 +130,9 @@ module.exports = withMT({
       zIndex: {
         "-1": "-1",
       },
+      backgroundImage: {
+        "hero-section": "url('/images/background-hero.png')",
+      },
     },
   },
   variants: {

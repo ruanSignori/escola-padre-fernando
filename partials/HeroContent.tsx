@@ -3,7 +3,7 @@ import Link from "next/link";
 export function HeroContent() {
   return (
     <div className="flex items-center justify-center flex-col">
-      <h1 className="text-5xl md:text-6xl max-w-7xl text-center text-blue-gray-900 dark:text-white font-extrabold leading-tighter tracking-tighter mt-20 mb-4">
+      <h1 className="h1 max-w-7xl text-center text-blue-gray-900 dark:text-white tracking-tighter mt-40">
         Escola Padre Fernando{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-600">
           Projetos
@@ -14,10 +14,7 @@ export function HeroContent() {
         alunos e professores ❤️.
       </p>
 
-      <Link
-        href="/"
-        className="text-white text-center px-10 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/50 w-5/6 mb-4 sm:w-auto sm:mb-0 "
-      >
+      <Link href="/" className="btn">
         Ver mais
       </Link>
     </div>
