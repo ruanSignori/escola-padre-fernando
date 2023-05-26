@@ -15,7 +15,7 @@ export function NavContainer() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-2xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-900 backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 dark:border-gray-700 transition-colors">
+    <Navbar className="mx-auto max-w-screen-2xl py-2 px-4 lg:px-8 lg:py-4 dark:bg-gray-900 backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100 dark:border-gray-700 transition-colors ">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900 dark:text-white ">
         <Link
           href="/"
