@@ -1,6 +1,6 @@
 /* Tipografia */
 .h1 {
-  @apply text-5xl font-extrabold leading-tight tracking-tighter;
+  @apply text-7xl font-extrabold leading-tight tracking-tighter;
 }
 
 .h2 {
