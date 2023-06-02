@@ -142,7 +142,7 @@ module.exports = withMT({
         "-1": "-1",
       },
       backgroundImage: {
-        "hero-section": "url('/images/background-hero.png')",
+        "hero-section": "url('/images/background-gradient.webp')",
       },
     },
   },
