@@ -6,7 +6,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-import { CardProjects } from "../../types/CardProjects";
+import { CardProjects } from "./types/CardProjects";
 
 import Link from "next/link";
 import Image from "next/image";
