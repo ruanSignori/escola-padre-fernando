@@ -19,7 +19,7 @@ export default function Home() {
       <NavContainer />
 
       {/* Main content of the page */}
-      <main className="mb-12 bg-hero-section bg-no-repeat bg-auto bg-top min-h-screen flex flex-col flex-grow py-10">
+      <main className="mb-12 bg-hero-section bg-no-repeat bg-auto bg-top min-h-screen flex flex-col flex-grow py-10 px-3">
         {/* Presentation */}
         <div className="flex items-center justify-center flex-col mt-32">
           <h1 className="h1 max-w-7xl text-center text-blue-gray-900 dark:text-white tracking-tighter">
