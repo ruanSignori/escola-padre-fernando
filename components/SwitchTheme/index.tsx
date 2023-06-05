@@ -14,7 +14,7 @@ export function SwitchTheme({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   }, []);
 
   useEffect(() => {
-    changeTheme({ darkTheme });
+    changeTheme(darkTheme);
   }, [darkTheme]);
 
   return (

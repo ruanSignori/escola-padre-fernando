@@ -1,6 +1,4 @@
-import { ChangeThemeProps } from "@/types/ChangeThemeProps";
-
-export function changeTheme({ darkTheme }: ChangeThemeProps) {
+export function changeTheme(darkTheme: boolean): void {
   if (darkTheme) {
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
