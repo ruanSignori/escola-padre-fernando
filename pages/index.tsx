@@ -1,10 +1,9 @@
-import { NavContainer } from "@/components/NavContainer";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Button } from "@material-tailwind/react";
 import { CardProjects } from "@/components/CardProjects";
 import RegtechIcon from "../public/images/regtech-icon.png";
-import MageSielIcon from "../public/images/mage-siel-boss.webp";
+import MageSielIcon from "../public/images/mageSiel-icon.webp";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,10 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="page bg-gray-100 dark:bg-black">
-      {/* Navbar */}
-      <NavContainer />
-
+    <div className="bg-gray-100 dark:bg-black">
       {/* Main content of the page */}
       <main className="mb-12 bg-hero-section bg-no-repeat bg-auto bg-top min-h-screen flex flex-col flex-grow py-10 px-3">
         {/* Presentation */}
