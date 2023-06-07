@@ -18,12 +18,12 @@ export function CardProjects(project: CardProjects) {
       <CardHeader
         shadow={false}
         floated={false}
-        className=" md:w-2/5 shrink-0 m-0 rounded-r-none"
+        className="hidden md:block w-5/5 md:w-2/5 shrink-0 m-0 rounded-r-none"
       >
         <Image
           src={project.img}
           alt={project.name}
-          className="w-full h-full object-center object-scale-down md:object-cover"
+          className="w-full object-center object-cover h-full"
         />
       </CardHeader>
       <CardBody className="dark:bg-zinc-900 rounded-r-lg">
@@ -44,7 +44,7 @@ export function CardProjects(project: CardProjects) {
           {project.description}
         </Typography>
         <Link
-          href={`projects/${encodeURI(project.linkToAcess)}`}
+          href={`projetos/${encodeURI(project.linkToAcess)}`}
           className="inline-block"
         >
           <Button variant="text" className="flex items-center gap-2">
