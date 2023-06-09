@@ -45,9 +45,9 @@ export function TabContainer() {
       desc: `Professor
       Igor dos Santos
       Alunos do 1° ano
-      Andrey de Freitas da Fontoura Catielen Nunes Padilha Clamine Horst Eduardo Lima de Vargas Evellyn de Aguiar Laguna Georgia Vigolo Juan Felício dos Santos Kalebe Augusto Benke Karine Guterres Conrado Kauã Lappe Kétchuly da Silva Machado Luiz Roberto de França Menezes Maria Eduarda da Rosa da Silva Matheus Luan Mella Vitória Campos Silva Vitória Silva de Oliveira
+                     Vitória Silva de Oliveira
       Alunos do 2° ano
-      Ana Maria Zart Bruno Mathias Vigolo Caroline da Silva Pereira Caroline Rodrigues Gonçalves David Martins Emerson Soares Maciel Ericka Caroliny Roque Fabiola Wunsch Gislaine Schmitz Hellen Borges de Vargas Jadi Maristane Weber Julia Prado Marques Jusseli Amanda Magedanz Kailane Silvestre da Luz Luana Olinda Kuhn Luiza Eduarda Nicoletti Manuela Jeske Netto Mauricio Junior Fin Michele Buhl Ruan Signori Victor Halmenschlager Yasmín Gonçalves Ribeiro`,
+                          `,
     },
   ];
   return (
