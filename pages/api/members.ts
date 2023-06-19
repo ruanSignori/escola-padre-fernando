@@ -19,5 +19,5 @@ export default async function handler(
 
   const dataToJson = JSON.parse(JSON.stringify(data));
 
-  res.status(200).json({ members: dataToJson });
+  res.status(200).json(dataToJson);
 }
