@@ -1,6 +1,6 @@
 import { Switch } from "@material-tailwind/react";
 import { HTMLAttributes, useEffect, useState } from "react";
-import { changeTheme } from "@/utils/ChangeTheme";
+import { changeTheme } from "@/functions/ChangeTheme";
 
 export function SwitchTheme({ ...rest }: HTMLAttributes<HTMLDivElement>) {
   const [darkTheme, setDarkTheme] = useState(true);
