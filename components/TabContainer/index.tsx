@@ -42,12 +42,7 @@ export function TabContainer() {
       label: "Créditos",
       value: "creditos",
       icon: UserGroupIcon,
-      desc: `Professor
-      Igor dos Santos
-      Alunos do 1° ano
-                     Vitória Silva de Oliveira
-      Alunos do 2° ano
-                          `,
+      desc: ``,
     },
   ];
   return (
