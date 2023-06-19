@@ -1,5 +1,4 @@
 import { TabContainer } from "@/components/TabContainer";
-import Image from "next/image";
 
 export default function Magesiel() {
   return (
