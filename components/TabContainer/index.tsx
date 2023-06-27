@@ -18,7 +18,7 @@ import { Members } from "@/models/members";
 import { useQuery } from "@tanstack/react-query";
 
 const getMembers = async (): Promise<Members[]> => {
-  const url = process.env.API_URL_MEMBERS;
+  const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
 
   if (!url) {
     throw new Error("ApiUrl environment variable is undefined or invalid");
