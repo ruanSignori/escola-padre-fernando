@@ -24,7 +24,9 @@ const getMembers = async (): Promise<Members[]> => {
     throw new Error("ApiUrl environment variable is undefined or invalid");
   }
 
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    mode: "no-cors",
+  });
 
   if (!res.ok) {
     throw new Error("Unable to access data, check URL");
