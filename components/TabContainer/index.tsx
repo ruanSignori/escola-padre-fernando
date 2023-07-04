@@ -49,7 +49,7 @@ export function TabContainer() {
       desc: (
         <>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             O jogo MageSiel foi desenvolvido por alunos da{" "}
@@ -58,21 +58,21 @@ export function TabContainer() {
             escola).
           </Typography>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             Atualmente você pode jogar o nosso jogo em qualquer sistema
             operacional para computador (não compatível com celulares).
           </Typography>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             O jogo é totalmente gratuito. Esperamos que você goste do jogo e se
             divirta. Se você for bom, talvez até consiga terminá-lo.
           </Typography>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             Boa sorte!
@@ -87,7 +87,7 @@ export function TabContainer() {
       desc: (
         <>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             O projeto “Game na escola” tem como foco principal apresentar uma
@@ -95,7 +95,7 @@ export function TabContainer() {
             aprendizagem.
           </Typography>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             Realizada com um grupo de alunos do 1º e 2° ano do ensino médio,o
@@ -116,14 +116,14 @@ export function TabContainer() {
       desc: (
         <>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             “É preciso abrir os sistemas de ensino a novas ideias. Em vez da
             homogeneidade e da rigidez, a diferença e a mudança” (Nóvoa - 2009).
           </Typography>
           <Typography
-            variant="paragraph"
+            variant="lead"
             className="text-gray-800 dark:text-gray-50"
           >
             Assim, um grande desafio da escola é proporcionar diferentes
@@ -141,22 +141,28 @@ export function TabContainer() {
       label: "Créditos",
       value: "creditos",
       icon: UserGroupIcon,
-      desc: data?.map(({ name, participant, id }, index) => (
-        <CardMembers name={name} participant={participant} key={index} />
-      )),
+      desc: (
+        <div className="grid grid-cols-1 gap-4 justify-items-stretch content-center items-stretch md:grid-cols-4">
+          {data?.map(({ name, participant, id }, index) => (
+            <CardMembers name={name} participant={participant} key={index} />
+          ))}
+        </div>
+      ),
     },
   ];
 
   return (
     <Tabs value="home" className="mt-10">
-      <TabsHeader className="dark:bg-gray-400">
+      <TabsHeader className="dark:bg-gray-900">
         {dataTab.map(({ label, value, icon }) => (
           <Tab key={value} value={value}>
-            <div className="flex items-center gap-2 ">
+            <div className="flex items-center gap-2">
               {React.createElement(icon, {
-                className: "w-5 h-5 dark:text-color",
+                className: "w-5 h-5 fill-blue-500",
               })}
-              <label className="hidden md:block">{label}</label>
+              <label className="hidden md:block dark:text-gray-500 font-bold">
+                {label}
+              </label>
             </div>
           </Tab>
         ))}

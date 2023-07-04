@@ -4,11 +4,11 @@ import { CardMembersProps } from "../types/CardMembersProps";
 
 export function CardMembers({ name, participant }: CardMembersProps) {
   return (
-    <div className="flex flex-col gap-6">
-      <div className="flex items-center gap-4">
-        <UserCircleIcon className="w-12" />
+    <div className="flex flex-col">
+      <div className="flex items-center gap-3">
+        <UserCircleIcon className="w-12 h-12 fill-gray-400" />
         <div>
-          <Typography variant="h6">{name}</Typography>
+          <Typography variant="h6" className="text-blue-gray-900 dark:text-gray-400">{name}</Typography>
           <Typography variant="small" color="gray" className="font-normal">
             {participant}
           </Typography>
