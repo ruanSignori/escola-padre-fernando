@@ -24,8 +24,3 @@
     @apply text-4xl;
   }
 }
-
-/* Botão */
-.btn {
-  @apply text-white text-center px-10 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/50 w-5/6 mb-4 sm:w-auto sm:mb-0;
-}
