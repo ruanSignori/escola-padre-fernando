@@ -5,39 +5,6 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Magesiel() {
-  const [buttonClicked, setButtonClicked] = useState(false);
-  const router = useRouter();
-
-  const handleDownload = async () => {
-    
-    const url =
-      "https://github.com/ruanSignori/Site-escola/blob/master/src/downloads/MageSiel.rar?raw=true";
-
-    setButtonClicked(true);
-
-    try {
-      const response = await fetch(url, {
-        mode: "no-cors",
-      });
-      const blob = await response.blob();
-
-      const zipUrlTemp = URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = zipUrlTemp;
-      link.download = "MageSiel.rar";
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      router.push("magesiel/download");
-    } catch (error) {
-      console.error("Erro durante o download do arquivo .rar:", error);
-    }
-    setButtonClicked(false);
-  };
-
   return (
     <div className=" py-20 md:py-32 px-3 min-h-screen bg-gray-100 dark:bg-black ">
       <div className="flex flex-col flex-shrink max-w-6xl m-auto">
