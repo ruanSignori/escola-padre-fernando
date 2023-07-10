@@ -8,22 +8,15 @@ export default function Magesiel() {
   const [buttonClicked, setButtonClicked] = useState(false);
   const router = useRouter();
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
     setButtonClicked(true);
 
     const url =
       "https://github.com/ruanSignori/Site-escola/blob/master/src/downloads/MageSiel.rar?raw=true";
 
     try {
-      const response = await fetch(url, {
-        mode: "no-cors",
-      });
-      const blob = await response.blob();
-
-      const zipUrlTemp = URL.createObjectURL(blob);
-
       const link = document.createElement("a");
-      link.href = zipUrlTemp;
+      link.href = url;
       link.download = "MageSiel.rar";
       link.style.display = "none";
       document.body.appendChild(link);
@@ -45,7 +38,7 @@ export default function Magesiel() {
         <h2 className="h2 dark:text-white text-center mt-16 mb-4">
           Faça o download gratuitamente 🎮
         </h2>
-
+        {/* Botão de download */}
         <Button
           variant="gradient"
           className="flex items-center gap-3 m-auto mt-6"
