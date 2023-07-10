@@ -1,3 +1,3 @@
 export default function MageSielDownload() {
-  return <div>eae</div>;
+  return <div className="page">eae</div>;
 }

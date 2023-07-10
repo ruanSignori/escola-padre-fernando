@@ -15,6 +15,11 @@
   @apply text-2xl font-bold leading-snug tracking-tight;
 }
 
+/* Tela inicial */
+.page {
+  @apply py-20 md:py-32 px-3 min-h-screen bg-gray-100 dark:bg-black;
+}
+
 @screen md {
   .h1 {
     @apply text-6xl;
