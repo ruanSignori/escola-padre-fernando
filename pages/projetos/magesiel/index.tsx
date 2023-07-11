@@ -3,6 +3,7 @@ import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { Button } from "@material-tailwind/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Magesiel() {
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -73,6 +74,10 @@ export default function Magesiel() {
             </>
           )}
         </Button>
+
+        <Link href="magesiel/download" className="underline decoration-dotted text-center mt-6 dark:text-zinc-200">
+          Guia de instalação
+        </Link>
       </div>
     </div>
   );
