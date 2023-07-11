@@ -1,9 +1,14 @@
 import { TabContainer } from "@/components/TabContainer";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
-import { Button } from "@material-tailwind/react";
+import { Button, Carousel, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
+
+import FirstImageHistory from "./assets/img/history-1.webp";
+import SecondImageHistory from "./assets/img/history-2.webp";
+import ThirdImageHistory from "./assets/img/history-3.webp";
 
 export default function Magesiel() {
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -74,10 +79,79 @@ export default function Magesiel() {
             </>
           )}
         </Button>
-
-        <Link href="magesiel/download" className="underline decoration-dotted text-center mt-6 dark:text-zinc-200">
+        {/* Guia de instalação */}
+        <Link
+          href="magesiel/download"
+          className="underline decoration-dotted text-center mt-6 dark:text-zinc-200 mb-32"
+        >
           Guia de instalação
         </Link>
+        {/* História sobre o jogo MageSiel */}
+        <div>
+          <h2 className="h2 dark:text-white">História MageSiel</h2>
+          <Typography
+            variant="lead"
+            className="dark:text-zinc-100 max-w-3xl leading-8 mt-12"
+          >
+            Recentemente, as famílias de magos estavam sendo extintas. Porém,
+            Siel era um dos últimos descendentes de uma família de magos que
+            lutava contra terríveis monstros, os quais assombram a humanidade, a
+            gerações antepassadas da família de Siel haviam deixado um pedido
+            aos descendentes das novas gerações,onde dizia &quot;Jamais revele
+            seu rosto ao mundo, não os deixe que reconheçam&quot; por isso Siel
+            sempre usa uma máscara que cobre todo seu rosto, por quê? Sua face
+            era marcada por um sinal, uma marca de sua família,que era
+            impossível de ser tirada pois era de nascença, passada de geração em
+            geração e somente os descendentes homens tinham.
+          </Typography>
+
+          {/* Carousel contendo imagens mostrando a 1º fase do jogo MageSiel */}
+          <Carousel className="rounded-xl w-2/3 mt-6">
+            <Image
+              src={FirstImageHistory}
+              alt="Primeira imagem mostrando a fase inicial de MageSiel"
+              className="h-full w-full object-cover"
+            />
+            <Image
+              src={SecondImageHistory}
+              alt="Segunda imagem mostrando a fase inicial de MageSiel"
+              className="h-full w-full object-cover"
+            />
+            <Image
+              src={ThirdImageHistory}
+              alt="Primeira imagem mostrando a fase inicial de MageSiel"
+              className="h-full w-full object-cover"
+            />
+          </Carousel>
+
+          <Typography
+            variant="lead"
+            className="dark:text-zinc-100 max-w-3xl leading-8 mt-12"
+          >
+            Por medo de tentar e fracassar também, Siel fugiu de sua cidade e
+            largou a magia, mas não completamente, pois ainda utilizava seus
+            poderes para fazer algumas Poções e para manter a energia de seu
+            cetro. Ele havia ganhado o cetro de seu bisavô, um artefato de
+            madeira feito à mão e um cristal também lapidado a mão pelo seu
+            bisavô,um dos maiores magos ancião do mundo,um homem sábio que
+            ajudava e trabalhava sempre em busca do melhor para sua família e
+            mundo.
+          </Typography>
+
+          <Typography
+            variant="lead"
+            className="dark:text-zinc-100 max-w-3xl leading-8 mt-12"
+          >
+            Após alguns anos de calmaria, os monstros começaram a atacar
+            novamente, Siel recebia sinais diariamente mas tentava ignorar e
+            para tentar viver sua vida &quot;tranquilamente&quot;. Mas era
+            impossível, estava se tornando cada dia mais difícil sair de casa
+            para fazer suas tarefas, pois o mundo estava tomado pelo medo e
+            caos. Ele desiste de se esconder e se revela como aprendiz de mago,
+            e sai numa aventura atrás de aprendizado e formação de seus poderes,
+            tentando trazer a paz de volta à vida das pessoas.
+          </Typography>
+        </div>
       </div>
     </div>
   );
