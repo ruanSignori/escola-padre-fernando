@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
-import { Navbar, MobileNav, IconButton } from "@material-tailwind/react";
+import {
+  Navbar,
+  IconButton,
+  Collapse,
+} from "@material-tailwind/react";
 import Link from "next/link";
 import { SwitchTheme } from "../SwitchTheme";
 import { NavList } from "./NavList";
@@ -64,10 +68,10 @@ export function NavContainer() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         {<NavList />}
         <SwitchTheme />
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }
