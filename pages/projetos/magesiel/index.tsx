@@ -87,7 +87,7 @@ export default function Magesiel() {
           Guia de instalação
         </Link>
         {/* História sobre o jogo MageSiel */}
-        <div>
+        <section className="mb-32">
           <h2 className="h2 dark:text-white">História MageSiel</h2>
           <Typography
             variant="lead"
@@ -151,7 +151,24 @@ export default function Magesiel() {
             e sai numa aventura atrás de aprendizado e formação de seus poderes,
             tentando trazer a paz de volta à vida das pessoas.
           </Typography>
-        </div>
+        </section>
+
+        {/* Vídeo contando sobre o seu desenvolvimento */}
+        <section>
+          <h2 className="h2 dark:text-white">
+            Um pouco mais sobre o desenvolvimento
+          </h2>
+          <div className="flex items-start justify-start h-1/2 mt-12">
+            <div className="max-w-screen-lg w-full">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://player.vimeo.com/video/645361061?h=53e31cae8d"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
