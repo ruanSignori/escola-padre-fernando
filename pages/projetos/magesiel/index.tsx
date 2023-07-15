@@ -9,7 +9,7 @@ import Image from "next/image";
 import FirstImageHistory from "../../../public/images/magesiel/history-1.webp";
 import SecondImageHistory from "../../../public/images/magesiel/history-2.webp";
 import ThirdImageHistory from "../../../public/images/magesiel/history-3.webp";
-import { galleryMageSiel } from "@/utils/GalleryMageSiel";
+import { galleryMageSiel } from "@/utils/galleryMageSiel";
 
 export default function Magesiel() {
   const [buttonClicked, setButtonClicked] = useState(false);

@@ -1,4 +1,4 @@
-import { GalleryMageSielTypes } from "./GalleryMageSielTypes";
+import { GalleryMageSielTypes } from "./types/GalleryMageSiel";
 
 import FirstImageGalery from "../../public/images/magesiel/galery-1.webp";
 import SecundImageGalery from "../../public/images/magesiel/galery-2.webp";
