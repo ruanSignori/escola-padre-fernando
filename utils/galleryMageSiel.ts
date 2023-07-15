@@ -1,12 +1,12 @@
 import { GalleryMageSielTypes } from "./types/GalleryMageSiel";
 
-import FirstImageGalery from "../../public/images/magesiel/galery-1.webp";
-import SecundImageGalery from "../../public/images/magesiel/galery-2.webp";
-import ThirdImageGalery from "../../public/images/magesiel/galery-3.webp";
-import FourthImageGalery from "../../public/images/magesiel/galery-4.webp";
-import FifthImageGalery from "../../public/images/magesiel/galery-5.webp";
-import SixthImageGalery from "../../public/images/magesiel/galery-6.webp";
-import SeventhImageGalery from "../../public/images/magesiel/galery-7.webp";
+import FirstImageGalery from "../public/images/magesiel/galery-1.webp";
+import SecundImageGalery from "../public/images/magesiel/galery-2.webp";
+import ThirdImageGalery from "../public/images/magesiel/galery-3.webp";
+import FourthImageGalery from "../public/images/magesiel/galery-4.webp";
+import FifthImageGalery from "../public/images/magesiel/galery-5.webp";
+import SixthImageGalery from "../public/images/magesiel/galery-6.webp";
+import SeventhImageGalery from "../public/images/magesiel/galery-7.webp";
 
 export const galleryMageSiel: GalleryMageSielTypes[] = [
   {
