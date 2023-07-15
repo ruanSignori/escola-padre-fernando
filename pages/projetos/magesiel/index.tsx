@@ -6,9 +6,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
-import FirstImageHistory from "./assets/img/history-1.webp";
-import SecondImageHistory from "./assets/img/history-2.webp";
-import ThirdImageHistory from "./assets/img/history-3.webp";
+import FirstImageHistory from "../../../public/images/magesiel/history-1.webp";
+import SecondImageHistory from "../../../public/images/magesiel/history-2.webp";
+import ThirdImageHistory from "../../../public/images/magesiel/history-3.webp";
+import { galleryMageSiel } from "@/utils/GalleryMageSiel";
 
 export default function Magesiel() {
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -154,7 +155,7 @@ export default function Magesiel() {
         </section>
 
         {/* Vídeo contando sobre o seu desenvolvimento */}
-        <section>
+        <section className="mb-32">
           <h2 className="h2 dark:text-white">
             Um pouco mais sobre o desenvolvimento
           </h2>
@@ -167,6 +168,17 @@ export default function Magesiel() {
                 ></iframe>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Galeria */}
+        <section>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+            {galleryMageSiel.map(({ id, src, alt }) => (
+              <div key={id} className="shadow-lg">
+                <Image src={src} alt={alt} />
+              </div>
+            ))}
           </div>
         </section>
       </div>
