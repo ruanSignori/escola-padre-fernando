@@ -3,7 +3,7 @@ import Image from "next/image";
 import VercelIcon from "../../public/vercel.svg";
 import { FooterList } from "./FooterList";
 
-export default function Example() {
+export default function Footer() {
   return (
     <footer className="w-full m-auto bg-gray-100 dark:bg-zinc-900 p-8">
       <div className="flex flex-row max-w-screen-lg m-auto flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-gray-100 dark:bg-zinc-900 text-center md:justify-between">
