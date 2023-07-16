@@ -10,9 +10,17 @@ import FirstImageHistory from "../../../public/images/magesiel/history-1.webp";
 import SecondImageHistory from "../../../public/images/magesiel/history-2.webp";
 import ThirdImageHistory from "../../../public/images/magesiel/history-3.webp";
 import { galleryMageSiel } from "@/utils/galleryMageSiel";
+import { CardMembers } from "@/components/CardMembers/Index";
+import { GetServerSideProps } from "next";
+import { Members } from "@/models/members";
 
-export default function Magesiel() {
+type MageSielProps = {
+  data: Members[];
+};
+
+export default function Magesiel({ data }: MageSielProps) {
   const [buttonClicked, setButtonClicked] = useState(false);
+
   const router = useRouter();
 
   const handleDownload = () => {
@@ -41,7 +49,15 @@ export default function Magesiel() {
     <div className="page">
       <div className="flex flex-col flex-shrink max-w-6xl m-auto">
         <h1 className="h1 text-light-blue-500">MageSiel</h1>
-        <TabContainer />
+        <TabContainer>
+          {data.map(({ name, participant }) => (
+            <CardMembers
+              key={crypto.randomUUID()}
+              name={name}
+              participant={participant}
+            />
+          ))}
+        </TabContainer>
         <h2 className="h2 dark:text-white text-center mt-16 mb-4">
           Faça o download gratuitamente 🎮
         </h2>
@@ -185,3 +201,25 @@ export default function Magesiel() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
+
+  if (!url) {
+    throw new Error("ApiUrl environment variable is undefined or invalid");
+  }
+
+  const res = await fetch(url, {
+    mode: "no-cors",
+  });
+
+  if (!res.ok) {
+    throw new Error("Unable to access data, check URL");
+  }
+
+  const data: Promise<Members[]> = await res.json();
+
+  return {
+    props: { data },
+  };
+};

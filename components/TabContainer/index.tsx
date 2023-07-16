@@ -13,34 +13,9 @@ import {
   AcademicCapIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
-import { CardMembers } from "./CardMembers/Index";
-import { Members } from "@/models/members";
-import { useQuery } from "@tanstack/react-query";
+import { TabContainerProps } from "./types/TabContainerProps";
 
-const getMembers = async (): Promise<Members[]> => {
-  const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
-
-  if (!url) {
-    throw new Error("ApiUrl environment variable is undefined or invalid");
-  }
-
-  const res = await fetch(url, {
-    mode: "no-cors",
-  });
-
-  if (!res.ok) {
-    throw new Error("Unable to access data, check URL");
-  }
-
-  return res.json();
-};
-
-export function TabContainer() {
-  const { data } = useQuery({
-    queryKey: ["members"],
-    queryFn: getMembers,
-  });
-
+export function TabContainer({ children }: TabContainerProps) {
   const dataTab = [
     {
       label: "Home",
@@ -143,9 +118,7 @@ export function TabContainer() {
       icon: UserGroupIcon,
       desc: (
         <div className="grid grid-cols-1 gap-4 justify-items-stretch content-center items-stretch md:grid-cols-4">
-          {data?.map(({ name, participant, id }, index) => (
-            <CardMembers name={name} participant={participant} key={index} />
-          ))}
+          {children}
         </div>
       ),
     },
