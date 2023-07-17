@@ -1,9 +1,9 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
-import TutorialOneStep from "./assets/img/first-step.webp";
-import TutorialSecondStep from "./assets/img/second-step.webp";
-import TutorialThirdStep from "./assets/img/third-step.webp";
+import TutorialOneStep from "../../../../public/images/magesiel/download/first-step.webp";
+import TutorialSecondStep from "../../../../public/images/magesiel/download/second-step.webp";
+import TutorialThirdStep from "../../../../public/images/magesiel/download/third-step.webp";
 
 export default function MageSielDownload() {
   return (
@@ -133,7 +133,6 @@ export default function MageSielDownload() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
