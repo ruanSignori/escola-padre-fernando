@@ -11,7 +11,7 @@ import SecondImageHistory from "../../../public/images/magesiel/history-2.webp";
 import ThirdImageHistory from "../../../public/images/magesiel/history-3.webp";
 import { galleryMageSiel } from "@/utils/galleryMageSiel";
 import { CardMembers } from "@/components/CardMembers/Index";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { Members } from "@/models/members";
 
 type MageSielProps = {
@@ -50,7 +50,7 @@ export default function Magesiel({ data }: MageSielProps) {
       <div className="flex flex-col flex-shrink max-w-6xl m-auto">
         <h1 className="h1 text-light-blue-500">MageSiel</h1>
         <TabContainer>
-          {data.map(({ name, participant }) => (
+          {data?.map(({ name, participant }) => (
             <CardMembers
               key={crypto.randomUUID()}
               name={name}
@@ -202,7 +202,7 @@ export default function Magesiel({ data }: MageSielProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
 
   if (!url) {
