@@ -11,14 +11,14 @@ import SecondImageHistory from "../../../public/images/magesiel/history-2.webp";
 import ThirdImageHistory from "../../../public/images/magesiel/history-3.webp";
 import { galleryMageSiel } from "@/utils/galleryMageSiel";
 import { CardMembers } from "@/components/CardMembers/Index";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import { Members } from "@/models/members";
 
 type MageSielProps = {
-  data: Members[];
+  data: Members[] | [];
 };
 
-export default function Magesiel({ data }: MageSielProps) {
+export default function Magesiel({ data = [] }: MageSielProps) {
   const [buttonClicked, setButtonClicked] = useState(false);
 
   const router = useRouter();
@@ -50,13 +50,14 @@ export default function Magesiel({ data }: MageSielProps) {
       <div className="flex flex-col flex-shrink max-w-6xl m-auto">
         <h1 className="h1 text-light-blue-500">MageSiel</h1>
         <TabContainer>
-          {data?.map(({ name, participant }) => (
-            <CardMembers
-              key={crypto.randomUUID()}
-              name={name}
-              participant={participant}
-            />
-          ))}
+          {data &&
+            data?.map(({ name, participant }) => (
+              <CardMembers
+                key={crypto.randomUUID()}
+                name={name}
+                participant={participant}
+              />
+            ))}
         </TabContainer>
         <h2 className="h2 dark:text-white text-center mt-16 mb-4">
           Faça o download gratuitamente 🎮
@@ -202,7 +203,8 @@ export default function Magesiel({ data }: MageSielProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
+  console.log("Server is ready");
   const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
 
   if (!url) {
@@ -210,10 +212,10 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 
   const res = await fetch(url, {
-    mode: "no-cors",
+    mode: "cors",
   });
 
-  if (!res.ok) {
+  if (res.status < 200 && res.status > 300) {
     throw new Error("Unable to access data, check URL");
   }
 
