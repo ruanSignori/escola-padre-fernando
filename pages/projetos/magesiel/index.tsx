@@ -204,7 +204,6 @@ export default function Magesiel({ data = [] }: MageSielProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  console.log("Server is ready");
   const url = process.env.NEXT_PUBLIC_API_URL_MEMBERS;
 
   if (!url) {
