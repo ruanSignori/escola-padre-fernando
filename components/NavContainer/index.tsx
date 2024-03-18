@@ -8,7 +8,7 @@ import Link from "next/link";
 import { SwitchTheme } from "../SwitchTheme";
 import { NavList } from "./NavList";
 
-export function NavContainer() {
+export function NavContainer(): JSX.Element {
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
