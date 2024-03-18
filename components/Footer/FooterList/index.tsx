@@ -6,41 +6,12 @@ export function FooterList() {
       <li>
         <Typography
           as="a"
-          href="#"
+          href="https://github.com/ruanSignori/escola-padre-fernando"
+          target="_blank"
           color="blue-gray"
           className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 dark:text-gray-50"
         >
-          About Us
-        </Typography>
-      </li>
-      <li>
-        <Typography
-          as="a"
-          href="#"
-          color="blue-gray"
-          className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 dark:text-gray-50"
-        >
-          License
-        </Typography>
-      </li>
-      <li>
-        <Typography
-          as="a"
-          href="#"
-          color="blue-gray"
-          className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 dark:text-gray-50"
-        >
-          Contribute
-        </Typography>
-      </li>
-      <li>
-        <Typography
-          as="a"
-          href="#"
-          color="blue-gray"
-          className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500 dark:text-gray-50"
-        >
-          Contact Us
+          Código fonte
         </Typography>
       </li>
     </>

@@ -16,7 +16,7 @@ export default function Footer() {
         color="blue-gray"
         className="mt-5 text-center font-normal dark:text-gray-50"
       >
-        &copy; 2023 E. E. E. B. Padre Fernando
+        &copy; 2024 E. E. E. B. Padre Fernando
       </Typography>
     </footer>
   );
