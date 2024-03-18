@@ -111,17 +111,7 @@ export function TabContainer({ children }: TabContainerProps) {
           </Typography>
         </>
       ),
-    },
-    {
-      label: "Créditos",
-      value: "creditos",
-      icon: UserGroupIcon,
-      desc: (
-        <div className="grid grid-cols-1 gap-4 justify-items-stretch content-center items-stretch md:grid-cols-4">
-          {children}
-        </div>
-      ),
-    },
+    }
   ];
 
   return (
